@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600\
+&family=Roboto+Slab:wght@300;400;500&display=swap');
+
+h1, h2, h3 {
+	@apply text-center font-semibold;
+}
+
+p, span, input, select, option {
+	@apply font-serif;
+}
+
+h1 {
+	@apply text-3xl uppercase text-blue-600;
+}
+
+h2 {
+	@apply text-xl;
+}
+
+.table-title {
+	@apply mb-10;
+}
+
+label {
+	@apply font-sans block text-gray-700 font-semibold mb-2;
+}
+
+input, select, option {
+	@apply text-xl rounded p-3;
+}
+
+.circle-btn {
+	@apply w-10 p-2 rounded-full;
+	>svg {
+		@apply text-gray-50 fill-current;
+	}
+}
+
+.search-form {
+	@apply flex flex-col items-center bg-blue-50 shadow-md p-8 rounded
+	w-80;
+	input, select {
+		@apply w-60;
+	}
+}
+
+.input-wrapper {
+	@apply flex mb-2;
+	&:last-of-type {
+		@apply mb-0;
+	}
+}
+
+.hour-number {
+	@apply font-sans font-semibold text-lg;
+}
+
+.hour-time {
+	@apply font-sans text-gray-600;
+}
+
+.schedule-table {
+	tr {
+		@apply border-t-2 border-gray-700;
+		&:last-of-type {
+			@apply border-b-2 border-gray-700;
+		}
+		&.hours-row {
+			@apply border-t-4 border-gray-900;
+		}
+	}
+	td {
+		@apply border border-gray-500 p-1 w-1/12 text-center font-serif;
+		border-collapse: collapse;
+		vertical-align: top;
+		&.day-cell {
+			@apply text-2xl font-semibold font-sans p-4;
+			vertical-align: middle;
+		}
+		&.hours-cell {
+			@apply p-4;
+			vertical-align: middle;
+		}
+	}
+}
+
+.cell-content-container {
+	@apply min-h-full flex flex-col items-center;
+}
+
+.lesson {
+	@apply rounded-sm p-2 bg-gray-200 mb-2;
+	&.ind {
+		@apply bg-blue-200;
+	}
+	&.divided {
+		@apply bg-red-200;
+	}
+	p {
+		@apply mb-1.5;
+		&:last-of-type {
+			@apply m-0;
+		}
+	}
+}
+
+.add-lesson-button-container {
+	@apply flex items-center justify-center;
+}
+
+.add-lesson-button, .add-obj-button {
+	@apply w-10 h-10 text-green-600 fill-current;
+}
+
+.add-obj-button {
+	@apply w-8 h-8 mt-2 mx-auto;
+}
+
+.del-obj-button {
+	@apply w-10 h-10 ml-2 my-auto text-red-600;
+}
+
+.divided-checkbox-container {
+	@apply my-auto ml-2;
+}
+
+.add-lesson-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	max-height: 75%;
+	overflow-y: auto;
+}
+
+.add-lesson-form-title {
+	@apply mb-4;
+}
+
+.add-lesson-form {
+	input {
+		@apply mb-2;
+		&:last-of-type {
+			@apply m-0;
+		}
+	}
+}
